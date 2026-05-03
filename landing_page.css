@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Name*/
+.logo {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+}
+
+/*Navigation*/
+.navigation ul {
+    display: flex;
+    gap: 24px;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(80, 79, 79);
+    font-weight: 600;
+}
+
+/*Header-actions*/
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Theme button */
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Download button */
+.btn {
+    padding: 8px 16px;
+    background-color: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Default Desktop */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/*------------ TABLET (768px - 1023px) ----------- */
+@media (max-width: 1023px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .navigation a,
+    .btn {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+    }
+
+}
+
+/*------------ MOBILE (<768px) ----------- */
+@media (max-width: 767px) {
+
+    .container{
+        padding: 20px 0;
+    }
+
+    .logo{
+        font-size: 24px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 26px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    header{
+        position: relative;
+    }
+
+    .nav-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-wrapper.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .navigation a,
+    .btn {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+    }
+}
