@@ -107,6 +107,26 @@ body {
 
 }
 
+/* Hero - Section */
+/* Hero - Section (Container Grid Layout)*/
+.hero-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 32px;
+}
+
+.hero-container .hero-heading{
+    color: #111827;
+    opacity: 100%;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.hero-container .hero-paragraph{
+    color: #4B5563;
+    padding: 44px 0;
+    opacity: 100%;
+}
 /*------------ MOBILE (<768px) ----------- */
 @media (max-width: 767px) {
 
